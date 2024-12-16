@@ -22,11 +22,13 @@ Your Node Name
 Port prefix
 
 284
-# Clone project repository
+**Clone project repository**
+```
 cd && rm -rf 0g-chain
 git clone https://github.com/0glabs/0g-chain
 cd 0g-chain
 git checkout v0.4.0
+```
 
 # Build binary
 make install
