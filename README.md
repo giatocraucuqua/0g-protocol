@@ -30,8 +30,10 @@ cd 0g-chain
 git checkout v0.4.0
 ```
 
-# Build binary
+**Build binary**
+```
 make install
+```
 
 # Prepare cosmovisor directories
 mkdir -p $HOME/.0gchain/cosmovisor/genesis/bin
