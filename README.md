@@ -35,9 +35,11 @@ git checkout v0.4.0
 make install
 ```
 
-# Prepare cosmovisor directories
+**Prepare cosmovisor directories**
+```
 mkdir -p $HOME/.0gchain/cosmovisor/genesis/bin
 ln -s $HOME/.0gchain/cosmovisor/genesis $HOME/.0gchain/cosmovisor/current -f
+```
 
 # Copy binary to cosmovisor directory
 cp $(which 0gchaind) $HOME/.0gchain/cosmovisor/genesis/bin
