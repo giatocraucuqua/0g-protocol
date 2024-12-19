@@ -14,14 +14,6 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.profile
 source .profile
 ```
 
-Node Installation
-
-Node Name
-
-Your Node Name
-Port prefix
-
-284
 **Clone project repository**
 ```
 cd && rm -rf 0g-chain
@@ -41,8 +33,10 @@ mkdir -p $HOME/.0gchain/cosmovisor/genesis/bin
 ln -s $HOME/.0gchain/cosmovisor/genesis $HOME/.0gchain/cosmovisor/current -f
 ```
 
-# Copy binary to cosmovisor directory
+**Copy binary to cosmovisor directory**
+```
 cp $(which 0gchaind) $HOME/.0gchain/cosmovisor/genesis/bin
+```
 
 # Set node CLI configuration
 0gchaind config chain-id zgtendermint_16600-2
