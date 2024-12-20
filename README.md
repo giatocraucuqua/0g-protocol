@@ -38,10 +38,12 @@ ln -s $HOME/.0gchain/cosmovisor/genesis $HOME/.0gchain/cosmovisor/current -f
 cp $(which 0gchaind) $HOME/.0gchain/cosmovisor/genesis/bin
 ```
 
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 0gchaind config chain-id zgtendermint_16600-2
 0gchaind config keyring-backend test
 0gchaind config node tcp://localhost:28457
+```
 
 # Initialize the node
 0gchaind init "Your Node Name" --chain-id zgtendermint_16600-2
