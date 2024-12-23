@@ -50,9 +50,11 @@ cp $(which 0gchaind) $HOME/.0gchain/cosmovisor/genesis/bin
 0gchaind init "Your Node Name" --chain-id zgtendermint_16600-2
 ```
 
-# Download genesis and addrbook files
+**Download genesis and addrbook files**
+```
 curl -L https://snapshots-testnet.nodejumper.io/og/genesis.json > $HOME/.0gchain/config/genesis.json
 curl -L https://snapshots-testnet.nodejumper.io/og/addrbook.json > $HOME/.0gchain/config/addrbook.json
+```
 
 **Set seeds**
 ```
