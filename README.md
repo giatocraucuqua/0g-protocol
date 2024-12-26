@@ -75,8 +75,10 @@ sed -i \
   $HOME/.0gchain/config/app.toml
 ```
 
-# Enable prometheus
+**Enable prometheus**
+```
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.0gchain/config/config.toml
+```
 
 # Change ports
 sed -i -e "s%:1317%:28417%; s%:8080%:28480%; s%:9090%:28490%; s%:9091%:28491%; s%:8545%:28445%; s%:8546%:28446%; s%:6065%:28465%" $HOME/.0gchain/config/app.toml
