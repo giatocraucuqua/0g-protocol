@@ -80,9 +80,11 @@ sed -i \
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.0gchain/config/config.toml
 ```
 
-# Change ports
+**Change ports**
+```
 sed -i -e "s%:1317%:28417%; s%:8080%:28480%; s%:9090%:28490%; s%:9091%:28491%; s%:8545%:28445%; s%:8546%:28446%; s%:6065%:28465%" $HOME/.0gchain/config/app.toml
 sed -i -e "s%:26658%:28458%; s%:26657%:28457%; s%:6060%:28460%; s%:26656%:28456%; s%:26660%:28461%" $HOME/.0gchain/config/config.toml
+```
 
 # Download latest chain data snapshot
 curl "https://snapshots-testnet.nodejumper.io/og/og_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.0gchain"
