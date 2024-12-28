@@ -86,11 +86,15 @@ sed -i -e "s%:1317%:28417%; s%:8080%:28480%; s%:9090%:28490%; s%:9091%:28491%; s
 sed -i -e "s%:26658%:28458%; s%:26657%:28457%; s%:6060%:28460%; s%:26656%:28456%; s%:26660%:28461%" $HOME/.0gchain/config/config.toml
 ```
 
-# Download latest chain data snapshot
+**Download latest chain data snapshot**
+```
 curl "https://snapshots-testnet.nodejumper.io/og/og_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.0gchain"
+```
 
-# Install Cosmovisor
+**Install Cosmovisor**
+```
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.0
+```
 
 # Create a service
 sudo tee /etc/systemd/system/og.service > /dev/null << EOF
