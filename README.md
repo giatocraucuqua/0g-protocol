@@ -96,7 +96,8 @@ curl "https://snapshots-testnet.nodejumper.io/og/og_latest.tar.lz4" | lz4 -dc - 
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.0
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/og.service > /dev/null << EOF
 [Unit]
 Description=0G node service
@@ -117,6 +118,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable og.service
+```
 
 # Start the service and check the logs
 sudo systemctl start og.service
